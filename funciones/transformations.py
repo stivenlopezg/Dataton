@@ -1,3 +1,4 @@
+
 def day_mapper(day):
     if day > 5:
         day = 'fin de semana'
