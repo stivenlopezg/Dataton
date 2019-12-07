@@ -1,9 +1,31 @@
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 
-numerical_features = []
+numerical_features = ['segmento', '2018', '2017', '2015', '2016', 'm2',
+                      'm10', 'm9', 'm3', 'm4', 'm7', 'm8', 'm6', 'm5',
+                      'wd5', 'wd4', 'wd3', 'wd2', 'wd0', 'wd1', 'wd6', 'no_financiera',
+                      'mean_actualizaciones', 'mean_aperturaproductos', 'mean_compras',
+                      'mean_pagos', 'mean_recargas', 'mean_transferencias',
+                      'mean_utilizacion_de_cupo_de_credito', 'sum_actualizaciones',
+                      'sum_aperturaproductos', 'sum_compras', 'sum_pagos', 'sum_recargas',
+                      'sum_transferencias', 'sum_utilizacion_de_cupo_de_credito',
+                      'count_actualizaciones', 'count_aperturaproductos', 'count_compras',
+                      'count_pagos', 'count_recargas', 'count_transferencias',
+                      'count_utilizacion_de_cupo_de_credito']
+
 categorical_features = []
-features = []
+
+features = ['segmento', '2018', '2017', '2015', '2016', 'm2',
+            'm10', 'm9', 'm3', 'm4', 'm7', 'm8', 'm6', 'm5',
+            'wd5', 'wd4', 'wd3', 'wd2', 'wd0', 'wd1', 'wd6', 'no_financiera',
+            'mean_actualizaciones', 'mean_aperturaproductos', 'mean_compras',
+            'mean_pagos', 'mean_recargas', 'mean_transferencias',
+            'mean_utilizacion_de_cupo_de_credito', 'sum_actualizaciones',
+            'sum_aperturaproductos', 'sum_compras', 'sum_pagos', 'sum_recargas',
+            'sum_transferencias', 'sum_utilizacion_de_cupo_de_credito',
+            'count_actualizaciones', 'count_aperturaproductos', 'count_compras',
+            'count_pagos', 'count_recargas', 'count_transferencias',
+            'count_utilizacion_de_cupo_de_credito']
 
 
 class ColumnsSelector(BaseEstimator, TransformerMixin):

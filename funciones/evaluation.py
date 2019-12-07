@@ -24,3 +24,4 @@ def metrics_summary(y_test, y_pred):
     print(f'La precisión es: {precision_score(y_test, y_pred)}')
     print(f'El recall es: {recall_score(y_test, y_pred)}')
     print(f'El puntaje F1 es: {f1_score(y_test, y_pred)} \n')
+
