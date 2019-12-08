@@ -48,7 +48,8 @@ def categorize(data, columns: list):
 def pivot_several_functions(data, index: str, columns: str, values: str, function: list):
     table = data.pivot_table(index=index, columns=columns, values=values, aggfunc=function, fill_value=0)
     table_index = table.index.tolist()
-    table_columns = table.columns.tolist()
+    table_columns = [str(i) + '_' + str(j) for i, j in zip(table.columns.get_levels_value(None).tolist(),
+                                                           table.columns.get_levels_value(columns).tolist())]
     table = pd.DataFrame(table.values, index=table_index, columns=table_columns)
     return table
 
